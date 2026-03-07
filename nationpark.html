@@ -1,457 +1,1210 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awesome Dreamer Photography</title>
-    <link rel="icon" href="/img/index/tablogo.webp" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="css/styleindex_v2.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Mooli&family=Roboto:wght@100&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="venobox/venobox.min.css" />
-  </head>
-  <style>
-    body {
-      padding-top: 64px;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awesome Dreamer Photography</title>
+  <link rel="icon" href="/img/index/tablogo.webp" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/styleindex_v2.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Mooli&family=Roboto:wght@100&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="venobox/venobox.min.css" />
+</head>
+<style>
+  body {
+    padding-top: 64px;
+  }
+
+  .content-item {
+    padding: 30px 0;
+    background-color: #ffffff;
+  }
+
+  .content-item.grey {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    height: 100%;
+  }
+
+  .content-item h2 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 45px;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+
+  .content-item h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #555555;
+    margin: 10px 0 15px;
+    padding: 0;
+  }
+
+  .content-headline {
+    height: 1px;
+    text-align: center;
+    margin: 20px 0 70px;
+  }
+
+  .content-headline h2 {
+    background-color: #ffffff;
+    display: inline-block;
+    margin: -20px auto 0;
+    padding: 0 20px;
+  }
+
+  .grey .content-headline h2 {
+    background-color: #f0f0f0;
+  }
+
+  .content-headline h3 {
+    font-size: 14px;
+    color: #aaaaaa;
+    display: block;
+  }
+
+  /* BOXES */
+
+  .box {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  .box h3 {
+    margin: 30px 0 5px;
+    font-weight: bold;
+  }
+
+  .box ul {
+    margin: 0;
+  }
+
+  .box ul li {
+    font-size: 13px;
+    border-bottom: 1px dashed #dddddd;
+    padding: 10px 0;
+    font-weight: 600;
+  }
+
+  .box ul li:last-child {
+    border-bottom: 0;
+  }
+
+  .box ul li i {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+
+  .box.categories ul li i {
+    color: #bbbbbb;
+    position: relative;
+    top: 2px;
+    width: 20px;
+  }
+
+  .posts ul li a {
+    font-size: 11px;
+    line-height: 23px;
+  }
+
+  .posts ul li a:hover {
+    color: #333333;
+  }
+
+  .posts ul li div {
+    font-size: 13px;
+    color: #999999;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 5px;
+  }
+
+  .box.posts ul li i {
+    color: #333333;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .box.tags ul.blog-tags li {
+    border: 0;
+  }
+
+  ul.blog-tags li {
+    padding: 7px 0;
+  }
+
+  div ul.blog-tags li i,
+  div .box.tags ul li i {
+    color: #ffffff;
+    position: relative;
+    top: 1px;
+    font-size: 14px;
+  }
+
+  .blog p img.pull-left {
+    margin-right: 15px;
+  }
+
+  .blog p img {
+    max-width: 300px;
+    border: 3px solid #bbbbbb;
+    padding: 5px;
+  }
+
+  .blockquote {
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+    border-left: 0.25rem solid #ccc;
+    padding-left: 1rem;
+    margin: 0 30px;
+    width: 70%;
+  }
+
+  .img-fluid {
+    border-radius: 0.25rem;
+  }
+
+  .mooli-regular {
+    font-family: 'Mooli', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* IMPROVED Image Gallery Styles - Tighter Layout */
+  .image-gallery-container {
+    max-width: 1100px;
+    margin: 15px auto;
+    padding: 0 10px;
+  }
+
+  .gallery-image-wrapper {
+    margin-bottom: 6px;
+    overflow: hidden;
+    line-height: 0;
+    border-radius: 2px;
+  }
+
+  .gallery-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .gallery-image-wrapper:hover img {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Tighter grid spacing */
+  .gallery-row {
+    margin-left: -3px;
+    margin-right: -3px;
+    margin-bottom: 6px;
+  }
+
+  .gallery-row>[class*='col-'] {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  /* Remove extra spacing from Bootstrap row */
+  .row.align-items-center.gallery-row {
+    row-gap: 0;
+  }
+
+  @media (max-width: 768px) {
+    .mooli-regular {
+      font-size: 12px;
     }
 
-    .content-item {
-      padding: 30px 0;
-      background-color: #ffffff;
+    .content-item h2,
+    .content-item h3,
+    .box h3,
+    .blockquote {
+      font-size: 16px;
     }
 
-    .content-item.grey {
-      background-color: #f0f0f0;
-      padding: 50px 0;
-      height: 100%;
-    }
-
-    .content-item h2 {
-      font-weight: 700;
-      font-size: 25px;
-      line-height: 45px;
-      text-transform: uppercase;
-      margin: 20px 0;
-    }
-
-    .content-item h3 {
-      font-weight: 400;
-      font-size: 20px;
-      color: #555555;
-      margin: 10px 0 15px;
-      padding: 0;
-    }
-
-    .content-headline {
-      height: 1px;
-      text-align: center;
-      margin: 20px 0 70px;
-    }
-
-    .content-headline h2 {
-      background-color: #ffffff;
-      display: inline-block;
-      margin: -20px auto 0;
-      padding: 0 20px;
-    }
-
-    .grey .content-headline h2 {
-      background-color: #f0f0f0;
-    }
-
-    .content-headline h3 {
-      font-size: 14px;
-      color: #aaaaaa;
-      display: block;
-    }
-
-    /* BOXES */
-
-    .box {
-      background-color: #ffffff;
-      padding: 10px 20px;
-      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-
-    .box h3 {
-      margin: 30px 0 5px;
-      font-weight: bold;
-    }
-
-    .box ul {
-      margin: 0;
-    }
-
-    .box ul li {
-      font-size: 13px;
-      border-bottom: 1px dashed #dddddd;
-      padding: 10px 0;
-      font-weight: 600;
-    }
-
-    .box ul li:last-child {
-      border-bottom: 0;
-    }
-
-    .box ul li i {
-      font-size: 18px;
-      margin-right: 20px;
-    }
-
-    .box.categories ul li i {
-      color: #bbbbbb;
-      position: relative;
-      top: 2px;
-      width: 20px;
-    }
-
-    .posts ul li a {
-      font-size: 11px;
-      line-height: 23px;
-    }
-
-    .posts ul li a:hover {
-      color: #333333;
-    }
-
+    .box ul li,
+    .posts ul li a,
     .posts ul li div {
-      font-size: 13px;
-      color: #999999;
-      font-weight: bold;
-      text-align: right;
-      margin-top: 5px;
-    }
-
-    .box.posts ul li i {
-      color: #333333;
-      font-size: 14px;
-      margin-right: 10px;
-    }
-
-    .box.tags ul.blog-tags li {
-      border: 0;
-    }
-
-    ul.blog-tags li {
-      padding: 7px 0;
-    }
-
-    div ul.blog-tags li i,
-    div .box.tags ul li i {
-      color: #ffffff;
-      position: relative;
-      top: 1px;
-      font-size: 14px;
-    }
-
-    .blog p img.pull-left {
-      margin-right: 15px;
-    }
-
-    .blog p img {
-      max-width: 300px;
-      border: 3px solid #bbbbbb;
-      padding: 5px;
+      font-size: 16px;
     }
 
     .blockquote {
-      font-size: 16px;
-      font-style: italic;
-      color: #555;
-      border-left: 0.25rem solid #ccc;
-      padding-left: 1rem;
-      margin: 0 30px;
-      width: 70%;
+      width: 90%;
+      margin: 0 15px;
     }
 
-    .img-fluid {
-      border-radius: 0.25rem;
-    }
-
-    .mooli-regular {
-      font-family: 'Mooli', sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    /* IMPROVED Image Gallery Styles - Tighter Layout */
     .image-gallery-container {
-      max-width: 1100px;
-      margin: 15px auto;
-      padding: 0 10px;
+      padding: 0 8px;
+      margin: 10px auto;
     }
 
     .gallery-image-wrapper {
-      margin-bottom: 6px;
-      overflow: hidden;
-      line-height: 0;
-      border-radius: 2px;
+      margin-bottom: 4px;
     }
 
-    .gallery-image-wrapper img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-    }
-
-    .gallery-image-wrapper:hover img {
-      transform: scale(1.01);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Tighter grid spacing */
     .gallery-row {
-      margin-left: -3px;
-      margin-right: -3px;
-      margin-bottom: 6px;
+      margin-left: -2px;
+      margin-right: -2px;
+      margin-bottom: 4px;
     }
 
-    .gallery-row > [class*='col-'] {
-      padding-left: 3px;
-      padding-right: 3px;
+    .gallery-row>[class*='col-'] {
+      padding-left: 2px;
+      padding-right: 2px;
     }
+  }
 
-    /* Remove extra spacing from Bootstrap row */
-    .row.align-items-center.gallery-row {
-      row-gap: 0;
-    }
+  body,
+  html {
+    overflow-x: hidden;
+  }
+</style>
 
-    @media (max-width: 768px) {
-      .mooli-regular {
-        font-size: 12px;
-      }
+<body>
+  <!--NAV MENU-->
+  <nav class="navbar navbar-expand-xl navbar-white" id="mainNav">
+    <div class="container-fluid px-5">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/index/logo.webp" alt="Logo" />
+      </a>
 
-      .content-item h2,
-      .content-item h3,
-      .box h3,
-      .blockquote {
-        font-size: 16px;
-      }
-
-      .box ul li,
-      .posts ul li a,
-      .posts ul li div {
-        font-size: 16px;
-      }
-
-      .blockquote {
-        width: 90%;
-        margin: 0 15px;
-      }
-
-      .image-gallery-container {
-        padding: 0 8px;
-        margin: 10px auto;
-      }
-
-      .gallery-image-wrapper {
-        margin-bottom: 4px;
-      }
-
-      .gallery-row {
-        margin-left: -2px;
-        margin-right: -2px;
-        margin-bottom: 4px;
-      }
-
-      .gallery-row > [class*='col-'] {
-        padding-left: 2px;
-        padding-right: 2px;
-      }
-    }
-
-    body,
-    html {
-      overflow-x: hidden;
-    }
-  </style>
-
-  <body>
-    <!--NAV MENU-->
-    <nav class="navbar navbar-expand-xl navbar-white" id="mainNav">
-      <div class="container-fluid px-5">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/index/logo.webp" alt="Logo" />
-        </a>
-
-        <div class="navbar-title">
-          <h2>Awesome Dreamer Photography</h2>
-        </div>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="album.html">Album</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="travel.html">Travel Journal</a>
-            </li>
-          </ul>
-        </div>
+      <div class="navbar-title">
+        <h2>Awesome Dreamer Photography</h2>
       </div>
-    </nav>
-    <!--END NAV MENU-->
 
-    <section class="content-item grey" id="blog-item">
-      <div class="container" style="max-width: 1200px; background-color: white">
-        <div
-          class="container"
-          style="
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="album.html">Album</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="travel.html">Travel Journal</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--END NAV MENU-->
+
+  <section class="content-item grey" id="blog-item">
+    <div class="container" style="max-width: 1200px; background-color: white">
+      <div class="container" style="
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-          "
-        >
-          <div class="row">Djo - End Of Beginning</div>
-          <div class="row">
-            <figure>
-              <audio controls src="music/nationpark.mp3"></audio>
-            </figure>
-          </div>
-        </div>
+          ">
+        <div class="row">Djo - End Of Beginning</div>
         <div class="row">
-          <!-- BLOG POST - START -->
-          <div class="col-sm-12 blog">
-            <h2 style="margin-left: 30px">California National Parks</h2>
-            <ul
-              class="blog-detail list-unstyled list-inline"
-              style="margin-left: 30px"
-            >
-              <li><i class="fa fa-calendar"></i>Jan 27,2025</li>
-              <li><i class="fa fa-user"></i>Vo Ngoc Khanh Nhi</li>
-            </ul>
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Trong một lần đi chơi cùng, cô bạn mình hỏi mình không ăn mừng gì
-              hết khi đã đi hết 9 national parks ở California hả, nó cũng là một
-              cột mốc gì đó chứ đúng không. tự nhiên làm mình nghĩ, "hmm sao
-              mình không nghĩ tới điều này trước nhỉ?" có lẽ do tới cái tuổi từ
-              lâu rồi không thích tiệc tùng lắm. nên là thôi, viết tạm cái bài
-              này để tổng kết lại hành trình 6 năm đi hết 9 cái national parks ở
-              Cali, và để mỗi lần đọc bài này, bản thân sẽ tự vui còn hơn cả lúc
-              đi ăn tiệc!
+          <figure>
+            <audio controls src="music/nationpark.mp3"></audio>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <!-- BLOG POST - START -->
+        <div class="col-sm-12 blog">
+          <h2 style="margin-left: 30px">California National Parks</h2>
+          <ul class="blog-detail list-unstyled list-inline" style="margin-left: 30px">
+            <li><i class="fa fa-calendar"></i>Jan 27,2025</li>
+            <li><i class="fa fa-user"></i>Vo Ngoc Khanh Nhi</li>
+          </ul>
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Trong một lần đi chơi cùng, cô bạn mình hỏi mình không ăn mừng gì
+            hết khi đã đi hết 9 national parks ở California hả, nó cũng là một
+            cột mốc gì đó chứ đúng không. tự nhiên làm mình nghĩ, "hmm sao
+            mình không nghĩ tới điều này trước nhỉ?" có lẽ do tới cái tuổi từ
+            lâu rồi không thích tiệc tùng lắm. nên là thôi, viết tạm cái bài
+            này để tổng kết lại hành trình 6 năm đi hết 9 cái national parks ở
+            Cali, và để mỗi lần đọc bài này, bản thân sẽ tự vui còn hơn cả lúc
+            đi ăn tiệc!
+          </p>
+          <blockquote class="blockquote">
+            <p class="mb-0">
+              "I need to be outside. I need to be in the world and to remember
+              that I am of it." - John Green
             </p>
-            <blockquote class="blockquote">
-              <p class="mb-0">
-                "I need to be outside. I need to be in the world and to remember
-                that I am of it." - John Green
-              </p>
-            </blockquote>
-            <p
-              class="mooli-regular mobile-text"
-              style="margin-left: 30px; margin-top: 20px; text-align: justify"
-            >
-              <u>Yosemite, 2019</u>
-            </p>
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Thật sự là phải cảm ơn bốn con người đã cùng mình đi Yosemite- cái
-              national park đầu tiên mình được tới, và rồi từ đó nhen nhóm cho
-              mình cái đam mê được đi hết tất cả các national park không chỉ ở
-              Cali mà còn cả nước Mỹ. nếu như không vì cái gật đầu của Tom, Mèo
-              và Gôn thì có lẽ cái đam mê sưu tầm những cái magnet ở mỗi park sẽ
-              không được khai sáng. đúng là tuổi trẻ không có gì ngoài thời gian
-              và sự liều lĩnh. 4 đứa trên một chiếc xe, lái liền 4 tiếng xuyên
-              màn đêm, ngắm mặt trời lên, long nhong Yosemite suốt ngày, rồi lại
-              lái về 4 tiếng xuyên màn đêm, ngắm mặt trời lặn. 2019 đã là 7 năm
-              về trước. nhưng khi nhắm mắt lại, mình vẫn có thể nhớ về hình ảnh
-              của một ngày hè tháng 8 năm đó, những hàng cây xanh, nắng nóng,
-              cái wowww khi vừa đi qua tunnel entrance và Yosemite thật sự ở
-              ngay trước mắt. mình không nhớ tụi mình đã nói những gì, chỉ nhớ
-              là đã cười thật nhiều, thậm chí còn cười chỉ vì chọc Gôn là cái
-              đứa ít nói nhất. có thể với mọi người một ngày ở Yosemite là không
-              đủ, là một sự thoáng qua. nhưng với mình, nó nhiều hơn một kỉ niệm
-              đẹp. mình có bộ ảnh đầu tiên, và tới bây giờ khi ngồi viết bài
-              này, thì bộ ảnh đó vẫn là duy nhất của mình với người mình yêu,
-              cũng (đã từng) yêu mình. có thể tình cảm của tụi mình kết thúc
-              rồi, nhưng Yosemite sẽ luôn là nơi bắt đầu cho tình yêu dành cho
-              các national parks, cho thiên nhiên, nơi mà dù bất cứ chuyện gì
-              xảy ra trong đời này, mình tìm thấy my inner piece và thực sự được
-              healing. cảm ơn Yosemite vì đã là nơi bắt đầu cho chuyến hành
-              trình này nhe!
-            </p>
+          </blockquote>
+          <p class="mooli-regular mobile-text" style="margin-left: 30px; margin-top: 20px; text-align: justify">
+            <u>Yosemite, 2019</u>
+          </p>
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Thật sự là phải cảm ơn bốn con người đã cùng mình đi Yosemite- cái
+            national park đầu tiên mình được tới, và rồi từ đó nhen nhóm cho
+            mình cái đam mê được đi hết tất cả các national park không chỉ ở
+            Cali mà còn cả nước Mỹ. nếu như không vì cái gật đầu của Tom, Mèo
+            và Gôn thì có lẽ cái đam mê sưu tầm những cái magnet ở mỗi park sẽ
+            không được khai sáng. đúng là tuổi trẻ không có gì ngoài thời gian
+            và sự liều lĩnh. 4 đứa trên một chiếc xe, lái liền 4 tiếng xuyên
+            màn đêm, ngắm mặt trời lên, long nhong Yosemite suốt ngày, rồi lại
+            lái về 4 tiếng xuyên màn đêm, ngắm mặt trời lặn. 2019 đã là 7 năm
+            về trước. nhưng khi nhắm mắt lại, mình vẫn có thể nhớ về hình ảnh
+            của một ngày hè tháng 8 năm đó, những hàng cây xanh, nắng nóng,
+            cái wowww khi vừa đi qua tunnel entrance và Yosemite thật sự ở
+            ngay trước mắt. mình không nhớ tụi mình đã nói những gì, chỉ nhớ
+            là đã cười thật nhiều, thậm chí còn cười chỉ vì chọc Gôn là cái
+            đứa ít nói nhất. có thể với mọi người một ngày ở Yosemite là không
+            đủ, là một sự thoáng qua. nhưng với mình, nó nhiều hơn một kỉ niệm
+            đẹp. mình có bộ ảnh đầu tiên, và tới bây giờ khi ngồi viết bài
+            này, thì bộ ảnh đó vẫn là duy nhất của mình với người mình yêu,
+            cũng (đã từng) yêu mình. có thể tình cảm của tụi mình kết thúc
+            rồi, nhưng Yosemite sẽ luôn là nơi bắt đầu cho tình yêu dành cho
+            các national parks, cho thiên nhiên, nơi mà dù bất cứ chuyện gì
+            xảy ra trong đời này, mình tìm thấy my inner piece và thực sự được
+            healing. cảm ơn Yosemite vì đã là nơi bắt đầu cho chuyến hành
+            trình này nhe!
+          </p>
 
-            <!-- IMPROVED IMAGE GALLERY WITH TIGHTER SPACING -->
-            <div class="image-gallery-container">
-              <!-- Large Image 1 -->
-              <div class="gallery-image-wrapper">
-                <a
-                  class="venobox"
-                  data-gall="gallery01"
-                  data-fitview="true"
-                  href="img/blog/nationalpark/nationpark1.webp"
-                >
-                  <img
-                    src="img/blog/nationalpark/nationpark1.webp"
-                    alt="Yosemite National Park 1"
-                    loading="lazy"
-                  />
-                </a>
+          <!-- IMPROVED IMAGE GALLERY WITH TIGHTER SPACING -->
+          <div class="image-gallery-container">
+            <!-- Large Image 1 -->
+            <div class="gallery-image-wrapper">
+              <a class="venobox" data-gall="gallery01" data-fitview="true"
+                href="img/blog/nationalpark/nationpark1.webp">
+                <img src="img/blog/nationalpark/nationpark1.webp" alt="Yosemite National Park 1" loading="lazy" />
+              </a>
+            </div>
+
+            <!-- Large Image 2 -->
+            <div class="gallery-image-wrapper">
+              <a class="venobox" data-gall="gallery01" data-fitview="true"
+                href="img/blog/nationalpark/nationpark2.webp">
+                <img src="img/blog/nationalpark/nationpark2.webp" alt="Yosemite National Park 2" loading="lazy" />
+              </a>
+            </div>
+
+            <!-- Grid for smaller images with tighter spacing -->
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark3.webp">
+                    <img src="img/blog/nationalpark/nationpark3.webp" alt="Yosemite National Park 3" loading="lazy" />
+                  </a>
+                </div>
               </div>
 
-              <!-- Large Image 2 -->
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark4.webp">
+                    <img src="img/blog/nationalpark/nationpark4.webp" alt="Yosemite National Park 4" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END IMAGE GALLERY -->
+
+          <p class="mooli-regular mobile-text" style="margin-left: 30px; margin-top: 20px; text-align: justify">
+            <u>Pinnacles, 2023</u>
+          </p>
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Bẵng đi một thời gian, covid hit, rồi công việc, giấy tờ, mình vẫn
+            long nhong đi chơi đây đó, nhưng tuyệt nhiên không hề nghĩ đến
+            việc đi National Park. Một phần là không tìm được người có thời
+            gian đi chung cùng mình. một phần nữa là nỗi sợ chiếc xe cũ cà
+            tàng của mình sẽ không sống sót được nếu đi chơi xa. Vậy là mình
+            vẫn đi chơi loanh quanh Cali này, rồi Las Vegas, Texas thăm chị
+            Chi, Hawaii, rồi bay cả về Việt Nam. Cho tới khi tự mình mua được
+            chiếc xe mới rồi, mình lại tiếp tục loanh quanh Cali, xuống So-cal
+            không biết bao nhiêu lần nhưng tuyệt nhiên vẫn bỏ quên National
+            Park. Và rồi phải cảm ơn cô Đông Hà đã không những tặng cho một
+            chuyến hội ngộ ở SF mà còn tặng đính kèm thêm thằng đệ mà cô nói
+            "sống chung trong cùng một khu phố nhưng chẳng bao giờ biết nhau".
+            Để rồi thằng đệ em đời đó đã lôi mình lại con đường đam mê sưu tầm
+            magnet ở national parks. cảm ơn thằng đệ đã không ngại một ngày hè
+            tháng 7 nóng như khùng điên, vác cặp xách cho mình, hike cùng mình
+            hơn 6 miles ở Pinnacles National Park mặc dù cả hai đứa vẫn chỉ là
+            dân beginner với hiking. Thằng đệ này chính là highlight của năm
+            2023, vì nếu không có người này thì cái app Alltrails sẽ không bao
+            giờ được tải về để tìm thêm tiếp những cái trails mới, và lưu lại
+            những lần đi chơi national parks khác nữa. Pinnacles có thể là cái
+            national park ở gần nhà nhất (vậy mà mất tới 4 năm mình mới được
+            đi), nhưng sẽ là cái national park đánh dấu sự trở lại đường đua
+            chinh phục National Park của mình. Pinnacles là national park thứ
+            2 mình visit. vui thật vì số 2 cũng là số mà mình yêu thích. happy
+            to be back! :)
+          </p>
+
+          <!-- IMPROVED IMAGE GALLERY 2 WITH TIGHTER SPACING -->
+          <div class="image-gallery-container">
+            <!-- Large Image -->
+            <div class="gallery-image-wrapper">
+              <a class="venobox" data-gall="gallery01" data-fitview="true"
+                href="img/blog/nationalpark/nationpark5.webp">
+                <img src="img/blog/nationalpark/nationpark5.webp" alt="Pinnacles National Park 5" loading="lazy" />
+              </a>
+            </div>
+
+            <!-- Grid Row 1 -->
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark6.webp">
+                    <img src="img/blog/nationalpark/nationpark6.webp" alt="Pinnacles National Park 6" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark7.webp">
+                    <img src="img/blog/nationalpark/nationpark7.webp" alt="Pinnacles National Park 7" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Grid Row 2 -->
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark8.webp">
+                    <img src="img/blog/nationalpark/nationpark8.webp" alt="Pinnacles National Park 8" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark9.webp">
+                    <img src="img/blog/nationalpark/nationpark9.webp" alt="Pinnacles National Park 9" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END IMAGE GALLERY 2 -->
+          <p class="mooli-regular mobile-text" style="margin-left: 30px; margin-top: 20px; text-align: justify">
+            <u>Sequoia and Kings, 2024</u>
+          </p>
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Mọi người có tin rằng những thứ mình làm vào ngày đầu năm mới
+            thường sẽ ảnh hưởng hoặc phản chiếu một phần nào đó những gì sẽ
+            diễn ra trong suốt năm đó không? mình có. Đầu năm 2024, cả nhà
+            mình đi hike nhẹ ở ngọn đồi sau trường Evergreen College để xin
+            vía cho mình sẽ được nhận vào trường học y tá, và thật sự thì sau
+            đó mình nhận tin được accept chỉ một ngày trước sinh nhật mình. Có
+            lẽ cũng vì được hike đầu năm mà cả năm đó mình được tự do đi hike
+            thật nhiều. Mình thích thời gian chỉ có một mình đi hike ở tất cả
+            những nơi mình muốn. Và mình cũng biết ơn hai chị, chị Yến và Vân,
+            đã cùng mình đi Sequoia và Kings National Park vào một ngày hè
+            tháng 7 năm đó. Chắc là do lo sợ khi nào học y tá rồi thì sẽ ít có
+            thời gian để đi chơi nên hai chị mùa hè đó đã cùng mình rong ruổi
+            nhiều nơi, con đường chạy đi Big Sur ngày hè đó tràn ngập tiếng
+            cười, cùng với thật nhiều dự định về tương lai tốt đẹp hơn. Cũng
+            vì chuyến đi này mà mình đã bắt đầu suy nghĩ (hơi toxic) rằng
+            những nơi mà có thể đi tới trong vòng 4-5 tiếng thì có thể thực
+            hiện được trong một ngày haha. Và mặc dù đi về hơi đuối thật,
+            nhưng được húp tô phở nóng (dù không ngon lắm nhưng vì trễ quá rồi
+            không có nhiều sự lựa chọn) sau một ngày rong ruổi tự nhiên thấy
+            cũng xứng đáng với cái sự mệt này quá!
+          </p>
+          <div class="image-gallery-container">
+            <!-- Large Image -->
+            <div class="gallery-image-wrapper">
+              <a class="venobox" data-gall="gallery01" data-fitview="true"
+                href="img/blog/nationalpark/nationpark10.webp">
+                <img src="img/blog/nationalpark/nationpark10.webp" alt="Pinnacles National Park 10" loading="lazy" />
+              </a>
+            </div>
+
+            <!-- Grid Row 1 -->
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark11.webp">
+                    <img src="img/blog/nationalpark/nationpark11.webp" alt="Pinnacles National Park 11"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark12.webp">
+                    <img src="img/blog/nationalpark/nationpark12.webp" alt="Pinnacles National Park 12"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Grid Row 2 -->
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <p class="mooli-regular" style="margin: 30px; text-align: justify">
+                  Mình đã tự hỏi tại sao Kings lại không nổi tiếng như Sequoia
+                  mặc dù hai cái national parks này chẳng khác gì nhau nhiều
+                  lắm và lại gần xịt nhau. Hai chị bạn mình còn băn khoăn tại
+                  sao không gộp luôn hai cái thành một!? Nếu đây là một cuộc
+                  đua, Sequoia là số 1 còn Kings phải là số 2. Nhưng dù là số
+                  nào đi nữa, mình thầm ngưỡng mộ sự hoành tráng và đa dạng
+                  của Kings. Mà thích nhất là cái sự đẹp này toả sáng trong
+                  thầm lặng, không ồn ào như Sequoia. và mình đã nói số 2 là
+                  số yêu thích của mình mà :)
+                </p>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark13.webp">
+                    <img src="img/blog/nationalpark/nationpark13.webp" alt="Pinnacles National Park 13"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Some say Kings Canyon National Park is so underrated because it’s
+            peaceful and uncrowded. Wouldn’t it the best reason to love this
+            park?
+          </p>
+
+          <div class="image-gallery-container">
+            <!-- Grid Row 1 -->
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark14.webp">
+                    <img src="img/blog/nationalpark/nationpark14.webp" alt="Pinnacles National Park 14"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark15.webp">
+                    <img src="img/blog/nationalpark/nationpark15.webp" alt="Pinnacles National Park 15"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Grid Row 2 -->
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-4">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark16.webp">
+                    <img src="img/blog/nationalpark/nationpark16.webp" alt="Pinnacles National Park 16"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark17.webp">
+                    <img src="img/blog/nationalpark/nationpark17.webp" alt="Pinnacles National Park 17"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark18.webp">
+                    <img src="img/blog/nationalpark/nationpark18.webp" alt="Pinnacles National Park 18"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mooli-regular mobile-text" style="margin-left: 30px; margin-top: 20px; text-align: justify">
+            <u>Redwood and Lassen Volcanic, May 2025</u>
+          </p>
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Có lẽ không gì hạnh phúc bằng rủ được hội bạn cùng đi National
+            Parks chung, vì mình biết không nhiều người thích đi hiking hay
+            road trip. Vậy nên chuyến đi Redwood và Lassen Volcanic National
+            Park này có thể là chuyến đi đông người nhất mà mình từng được
+            plan và thực hiện (có thể cũng là duy nhất, vì mình thực sự thích
+            small party). Chuyến đi này giống như là tự thưởng sau khi qua
+            được kì thứ 2 của nursing program. Cái cảm giác vừa stress khi đi
+            học, vừa stress lên plan đi chơi nó sướng gì đâu :)) Đây cũng là
+            lần đầu đi mướn được chiếc xe bự nhất từ trước giờ để đi chơi. Lúc
+            mà lấy xe từ chỗ rent ở sân bay về, mình cứ nghĩ là mình quẹt xe
+            trúng cái tường ở nơi parking rồi á tại người mình nhỏ xíu mà xe
+            thì bự, mình lái chưa quen nên không thấy đường gì hết trơn :(
+            Nhưng mà đi 2 ngày về thì mình tự tin lái đuợc cả xe tải (jk haha)
+          </p>
+
+          <div class="image-gallery-container">
+            <!-- Large Image -->
+            <div class="gallery-image-wrapper">
+              <a class="venobox" data-gall="gallery01" data-fitview="true"
+                href="img/blog/nationalpark/nationpark19.webp">
+                <img src="img/blog/nationalpark/nationpark19.webp" alt="Pinnacles National Park 10" loading="lazy" />
+              </a>
+            </div>
+          </div>
+
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Mình có một kỉ niệm chắc sẽ không bao giờ quên được ở Redwood. Vì
+            không thể mua được permit để hike Fern Canyon Loop nên nhóm mình
+            quyết định chơi liều đi hike cái trail hơn 10 miles James Irvine
+            Trail, nhưng tính ra chỉ hike được 6.4 miles thôi vì không thể
+            vòng về lại được do Long bị đau chân. Cũng vì vậy mà có một kỉ
+            niệm khó quên. Đó là tụi mình tưởng cái chỗ kết thúc của trail với
+            cái chỗ đậu xe chắc cũng gần thôi, không ngờ nó mất tới hơn 30
+            phút lái xe mới tới nơi. Mà chỗ đó thì không có uber, đi bộ thì
+            không được do đồng đội quá mệt và đau chân, nên thành ra tụi mình
+            coi như là bị kẹt ở đó. Cách cuối cùng là phải đi hỏi nhờ những
+            người xung quanh cho đi nhờ về chỗ đậu xe, mà cũng đâu phải dễ vì
+            nhóm đông tới 6 người. Trộm vía sao xin được một cặp đôi đồng ý
+            chở mình và chị Yến về chỗ đậu xe. Trên đường đi nói chuyện thì
+            biết bạn gái đó cũng là nurse vừa tốt nghiệp và làm ở Daily City.
+            trong khi nói chuyện thì hai bạn đó nghĩ là có thể chở hết tất cả
+            mọi người trong một chuyến luôn thì mình không cần phải lái xe
+            quay lại con đường vừa nhỏ, vừa xóc đó nữa. Bây giờ ngồi nhớ lại,
+            nếu như hôm đó không nhờ được hai bạn trẻ kia chở về thì thực sự
+            không biết sẽ như nào nữa. Vì nếu mình có hike ngược lại cái đường
+            đi vào dù đã rất mệt rồi, thì khi lấy được xe và tới chở mọi người
+            có lẽ là trời sẽ tối mất, mà lái xe đường đó vào buổi tối thì thôi
+            rồi luôn...Không dám nghĩ tới nữa. thôi trời cho sống tiếp :))
+          </p>
+
+          <div class="image-gallery-container">
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark20.webp">
+                    <img src="img/blog/nationalpark/nationpark20.webp" alt="Pinnacles National Park 14"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark21.webp">
+                    <img src="img/blog/nationalpark/nationpark21.webp" alt="Pinnacles National Park 15"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Một điều đặc biệt của chuyến đi này nữa là mình được ngắm tuyết ở
+            Lassen Volcanic np. còn gì lạ hơn được thấy tuyết ở khu vực núi
+            lửa vào một ngày...mùa hè ở Cali. Vậy nên mình nghĩ là cuộc sống
+            này nó có nhiều thứ kì lạ nhưng đặc biệt, nên mình phải luôn luôn
+            think positive khi nó xảy ra. à, với cả ăn ly mì gói khi đi chơi
+            xa ở nơi lạnh lạnh nó sướng cái người lắm luôn hehe!
+          </p>
+
+          <div class="image-gallery-container">
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark22.webp">
+                    <img src="img/blog/nationalpark/nationpark22.webp" alt="Pinnacles National Park 14"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark23.webp">
+                    <img src="img/blog/nationalpark/nationpark23.webp" alt="Pinnacles National Park 15"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="image-gallery-container">
+            <!-- Grid Row 1 -->
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark24.webp">
+                    <img src="img/blog/nationalpark/nationpark24.webp" alt="Pinnacles National Park 13"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <p class="mooli-regular" style="margin: 30px; text-align: justify">
+                  Perhaps it’s not too late to appreciate the unique feeling
+                  of marking the days on the calendar. life genuinely (and
+                  suddenly) worth looking forward to.
+                </p>
+              </div>
+            </div>
+
+            <!-- Grid Row 2 -->
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark25.webp">
+                    <img src="img/blog/nationalpark/nationpark25.webp" alt="Pinnacles National Park 11"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark26.webp">
+                    <img src="img/blog/nationalpark/nationpark26.webp" alt="Pinnacles National Park 12"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mooli-regular mobile-text" style="margin-left: 30px; margin-top: 20px; text-align: justify">
+            <u>Channel Islands, July 2025</u>
+          </p>
+          <blockquote class="blockquote">
+            <p class="mb-0">
+              “My toxic trait is that I think anything that is within a 4-5
+              hour drive can be a quick day trip 🫣 ”
+            </p>
+          </blockquote>
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Thật vậy! nhưng vì chẳng ai cản (đúng ra là không cản được) nên
+            mình cứ đi thôi :)) phải cảm ơn chị Yến vì hầu như kèo nào mình rủ
+            đi chơi chị cũng sẵn sàng free để đi cùng mình. bỏ sếp bỏ việc chứ
+            nhất định không bỏ đi chơi :) hai chị em đi chơi cùng nhau nhiều
+            tới nỗi chị Yến tự nhận là bữa nay qua nhà Nhi ngủ lại thấy cái
+            giường nó thân quen, chỉ cần đặt lưng xuống là có thể ngủ liền
+            (bonus thêm tiếng ngáy mỗi đêm nên thường ngày đi chơi mình hay bị
+            mất ngủ haha). chắc trên đời cũng không có nhiều người như chị
+            Yến, chấp nhận cùng mình lái xe 4 tiếng đồng hồ từ 2-3 giờ sáng
+            xuống Ventura, đi tàu ra đảo đi hike một cái trail dài gần 8 miles
+            dưới cái nắng nóng không có một bóng cây, rồi lại đi tàu quay lại
+            đất liền, lái xe 4 tiếng hơn về nhà là qua luôn ngày mới. tô phở
+            nóng sau khi về đất liền sau một ngày hike khùng điên quả thật
+            xứng là highlight của ngày hè tháng 7 đó.
+          </p>
+
+          <div class="image-gallery-container">
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark27.webp">
+                    <img src="img/blog/nationalpark/nationpark27.webp" alt="Pinnacles National Park 14"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark28.webp">
+                    <img src="img/blog/nationalpark/nationpark28.webp" alt="Pinnacles National Park 15"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="row align-items-center gallery-row justify-content-center">
+                  <div class="col-12 col-md-8">
+                    <div class="gallery-image-wrapper">
+                      <a class="venobox" data-gall="gallery01" data-fitview="true"
+                        href="img/blog/nationalpark/nationpark29.webp">
+                        <img src="img/blog/nationalpark/nationpark29.webp" alt="Pinnacles National Park 15"
+                          loading="lazy" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row align-items-center gallery-row justify-content-center">
+                  <div class="col-12 col-md-8">
+                    <div class="gallery-image-wrapper">
+                      <a class="venobox" data-gall="gallery01" data-fitview="true"
+                        href="img/blog/nationalpark/nationpark31.webp">
+                        <img src="img/blog/nationalpark/nationpark31.webp" alt="Pinnacles National Park 15"
+                          loading="lazy" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark30.webp">
+                    <img src="img/blog/nationalpark/nationpark30.webp" alt="Pinnacles National Park 15"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-4">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark32.webp">
+                    <img src="img/blog/nationalpark/nationpark32.webp" alt="Pinnacles National Park 16"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark33.webp">
+                    <img src="img/blog/nationalpark/nationpark33.webp" alt="Pinnacles National Park 17"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark34.webp">
+                    <img src="img/blog/nationalpark/nationpark34.webp" alt="Pinnacles National Park 18"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+              Mình cũng chẳng phải siêu nhân hay gì khi lái xe liên tục mà
+              không mệt. Tối đó thực sự là mình đuối lắm rồi, chừng nửa đêm
+              khi còn cách nhà chừng 1 tiếng nữa là cơ thể mình như muốn sập
+              nguồn tới nơi. Chưa kể là mình lái xe về đêm mình không thấy rõ,
+              như kiểu chụp ảnh mà không lấy nét á, tất cả ánh đèn nó cứ lung
+              linh huyền ảo. Có đoạn xém xíu nữa là lụi vào cái bảng hiệu
+              đường ở khúc rẽ trái, may mà tỉnh kịp. Nhờ ơn chị Yến dù cũng
+              mệt không kém nhưng luôn cố gắng kiếm chuyện để nói với mình cho
+              tỉnh ngủ. Chị Yến là kiểu bạn "một đứa dám rủ, một đứa dám đi"
+              hehee
+            </p>
+
+            <div class="image-gallery-container">
+              <!-- Grid Row 1 -->
+              <div class="row align-items-center gallery-row">
+                <div class="col-12 col-md-6">
+                  <div class="gallery-image-wrapper">
+                    <a class="venobox" data-gall="gallery01" data-fitview="true"
+                      href="img/blog/nationalpark/nationpark35.webp">
+                      <img src="img/blog/nationalpark/nationpark35.webp" alt="Pinnacles National Park 13"
+                        loading="lazy" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="gallery-image-wrapper">
+                    <a class="venobox" data-gall="gallery01" data-fitview="true"
+                      href="img/blog/nationalpark/nationpark36.webp">
+                      <img src="img/blog/nationalpark/nationpark36.webp" alt="Pinnacles National Park 13"
+                        loading="lazy" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Grid Row 2 -->
+              <div class="row align-items-center gallery-row">
+                <div class="col-12 col-md-6">
+                  <div class="gallery-image-wrapper">
+                    <a class="venobox" data-gall="gallery01" data-fitview="true"
+                      href="img/blog/nationalpark/nationpark37.webp">
+                      <img src="img/blog/nationalpark/nationpark37.webp" alt="Pinnacles National Park 11"
+                        loading="lazy" />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="gallery-image-wrapper">
+                    <a class="venobox" data-gall="gallery01" data-fitview="true"
+                      href="img/blog/nationalpark/nationpark38.webp">
+                      <img src="img/blog/nationalpark/nationpark38.webp" alt="Pinnacles National Park 12"
+                        loading="lazy" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mooli-regular mobile-text" style="margin-left: 30px; margin-top: 20px; text-align: justify">
+            <u>Death Valley and Joshua Tree, Dec 2025</u>
+          </p>
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Death Vally và Joshua Tree là 2 cái np cuối cùng trong chuyến hành
+            trình chinh phục 9 cái np ở Cali của mình. Chuyến đi này mình lên
+            plan từ khi sem 3 còn chưa kết thúc, nên mình cực kì háo hức. Có
+            thời điểm mình thi rớt exam, cái plan này là một trong những động
+            lực để mình tiếp tục cố gắng pass cái lớp medsurg đó. Và thực sự
+            là chuyến đi này không làm mình thất vọng. DDây cũng là chuyến đi
+            đầu tiên mà mình và chị Yến bay cùng nhau (nhắc tới đây vẫn thấy
+            mình silly vì nghe theo gpt book chuyến bay về ở Ontario mặc dù
+            Palm Springs có sân bay gần Joshua Tree hơn). hai đứa đi từ lúc
+            mặt trời còn chưa mọc, được ngắm sunrise ở trên máy bay, đẹp tới
+            mức quên cả cơn buồn ngủ. mình thích cái cảm giác tự do được lái
+            xe ngắm cảnh và check off places ở Death Valley. tụi mình đã tới
+            được điểm thấp nhất của nước Mỹ- Badwater Basin, 86m below the sea
+            level. xong lại lái xe chừng 4 tiếng xuống airbnb của tụi mình ở
+            Joshua Tree np. mình sẽ không bao giờ quên được hai cái bóng người
+            của hai đứa vừa kéo xe đẩy vừa tìm đường vào airbnb nhưng bị lạc
+            do trời quá tối, chưa kể cái lạnh của Joshua vào tháng 12 cuối năm
+            nó buốt dã man. có lẽ vì vui nên không mệt.
+          </p>
+
+          <div class="image-gallery-container">
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true" href="img/travel/joshua/joshua2.webp">
+                    <img src="img/travel/joshua/joshua2.webp" alt="Pinnacles National Park 15" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="row align-items-center gallery-row justify-content-center">
+                  <div class="col-12">
+                    <div class="gallery-image-wrapper">
+                      <a class="venobox" data-gall="gallery01" data-fitview="true"
+                        href="img/travel/joshua/joshua3.webp">
+                        <img src="img/travel/joshua/joshua3.webp" alt="Pinnacles National Park 15" loading="lazy" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row align-items-center gallery-row justify-content-center">
+                  <div class="col-12">
+                    <div class="gallery-image-wrapper">
+                      <a class="venobox" data-gall="gallery01" data-fitview="true"
+                        href="img/blog/nationalpark/nationpark39.webp">
+                        <img src="img/blog/nationalpark/nationpark39.webp" alt="Pinnacles National Park 15"
+                          loading="lazy" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="row align-items-center gallery-row justify-content-center">
+                  <div class="col-12">
+                    <div class="gallery-image-wrapper">
+                      <a class="venobox" data-gall="gallery01" data-fitview="true"
+                        href="img/blog/nationalpark/nationpark41.webp">
+                        <img src="img/blog/nationalpark/nationpark41.webp" alt="Pinnacles National Park 15"
+                          loading="lazy" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row align-items-center gallery-row justify-content-center">
+                  <div class="col-12">
+                    <div class="gallery-image-wrapper">
+                      <a class="venobox" data-gall="gallery01" data-fitview="true"
+                        href="img/travel/joshua/joshua8.webp">
+                        <img src="img/travel/joshua/joshua8.webp" alt="Pinnacles National Park 15" loading="lazy" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark40.webp">
+                    <img src="img/blog/nationalpark/nationpark40.webp" alt="Pinnacles National Park 15"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-center gallery-row">
+              <div class="col-12">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark42.webp">
+                    <img src="img/blog/nationalpark/nationpark42.webp" alt="Pinnacles National Park 13"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Hai chị em may mắn vì đi trúng hai ngày thời tiết đẹp. Tối ở lại
+            Joshua không cần phải chạy đi đâu xa cũng được ngồi ngắm sao ngay
+            trước chỗ ngủ của tụi mình. Đâu phải là có thật nhiều tiền mới
+            được tự do đi đây đó, ngồi bên lửa trại uống bia cùng nhau, ngước
+            đầu lên là thấy bầu trời đầy sao. Hai chị em mình làm được những
+            điều này khi cả hai thực sự chẳng có gì nhiều trong tay hết. Rất
+            young, dumb and broke hahaa.
+          </p>
+
+          <div class="image-gallery-container">
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="row align-items-center gallery-row justify-content-center">
+                  <div class="col-12">
+                    <div class="gallery-image-wrapper">
+                      <a class="venobox" data-gall="gallery01" data-fitview="true"
+                        href="img/blog/nationalpark/nationpark43.webp">
+                        <img src="img/blog/nationalpark/nationpark43.webp" alt="Pinnacles National Park 15"
+                          loading="lazy" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row align-items-center gallery-row justify-content-center">
+                  <div class="col-12">
+                    <div class="gallery-image-wrapper">
+                      <a class="venobox" data-gall="gallery01" data-fitview="true"
+                        href="img/blog/nationalpark/nationpark44.webp">
+                        <img src="img/blog/nationalpark/nationpark44.webp" alt="Pinnacles National Park 15"
+                          loading="lazy" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark45.webp">
+                    <img src="img/blog/nationalpark/nationpark45.webp" alt="Pinnacles National Park 15"
+                      loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Mặc dù tối đó lạnh quá nên chị Yến bị sốt vì mệt, sáng sớm hôm sau
+            hai đứa vẫn dậy sớm chờ sunrise. How lucky i am to have such an
+            awesome travel buddy? Cảm động quá phải viết tiếng Anh cho đỡ sến
+            huhu. Chị Yến là điển hình cho những người đi cùng mình bất kể kế
+            hoạch của mình trông ngớ ngẩn và nghe có vẻ điên khùng. Người đó
+            không chỉ muốn trở thành bạn đồng hành mà còn là niềm đam mê chung
+            để crossing off a bucket list của nhau. Có lẽ đó là lý do tại sao
+            họ đi cùng và ở lại với mình trong một thời gian dài như vậy, mặc
+            dù có một thời gian cả hai chẳng liên lạc gì với nhau. Tất cả
+            những người đi cùng mình trong hành trình này, những kỷ niệm mà
+            tụi mình chia sẻ cùng nhau sẽ luôn ở đó, chỉ chờ đợi để được khơi
+            dậy một lần nữa mỗi khi chúng mình nói về những chuyến đi trong
+            quá khứ. Thật tuyệt khi có những kỉ niệm chung để nói về trong
+            cuộc sống phải không?
+          </p>
+
+          <div class="image-gallery-container">
+            <!-- Grid Row 1 -->
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark47.webp">
+                    <img src="img/blog/nationalpark/nationpark47.webp" alt="Pinnacles National Park 7" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true" href="img/travel/joshua/joshua14.webp">
+                    <img src="img/travel/joshua/joshua14.webp" alt="Pinnacles National Park 8" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Grid Row 2 -->
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true"
+                    href="img/blog/nationalpark/nationpark46.webp">
+                    <img src="img/blog/nationalpark/nationpark46.webp" alt="Pinnacles National Park 6" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="gallery-image-wrapper">
+                  <a class="venobox" data-gall="gallery01" data-fitview="true" href="img/travel/joshua/joshua17.webp">
+                    <img src="img/travel/joshua/joshua17.webp" alt="Pinnacles National Park 9" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+
               <div class="gallery-image-wrapper">
-                <a
-                  class="venobox"
-                  data-gall="gallery01"
-                  data-fitview="true"
-                  href="img/blog/nationalpark/nationpark2.webp"
-                >
-                  <img
-                    src="img/blog/nationalpark/nationpark2.webp"
-                    alt="Yosemite National Park 2"
-                    loading="lazy"
-                  />
+                <a class="venobox" data-gall="gallery01" data-fitview="true"
+                  href="img/blog/nationalpark/nationpark48.webp">
+                  <img src="img/blog/nationalpark/nationpark48.webp" alt="Yosemite National Park 2" loading="lazy" />
                 </a>
               </div>
 
@@ -459,1486 +1212,166 @@
               <div class="row align-items-center gallery-row">
                 <div class="col-12 col-md-6">
                   <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark3.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark3.webp"
-                        alt="Yosemite National Park 3"
-                        loading="lazy"
-                      />
+                    <a class="venobox" data-gall="gallery01" data-fitview="true" href="img/travel/joshua/joshua23.webp">
+                      <img src="img/travel/joshua/joshua23.webp" alt="Yosemite National Park 3" loading="lazy" />
                     </a>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-6">
                   <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark4.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark4.webp"
-                        alt="Yosemite National Park 4"
-                        loading="lazy"
-                      />
+                    <a class="venobox" data-gall="gallery01" data-fitview="true"
+                      href="img/blog/nationalpark/nationpark49.webp">
+                      <img src="img/blog/nationalpark/nationpark49.webp" alt="Yosemite National Park 4"
+                        loading="lazy" />
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- END IMAGE GALLERY -->
+          </div>
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            Trái đất này thật sự rất rộng lớn, và có thật là nhiều nơi nữa mà
+            mình muốn được đặt chân tới. vậy nên thường mình không háo hức lắm
+            khi quay lại những nơi mà mình đã từng đi qua, nếu như không vì
+            một lí do đặc biệt nào đó. Nhưng mà, Yosemite có lẽ là national
+            park duy nhất mà nếu như có cơ hội trong tương lai, mình muốn được
+            quay lại một lần và thực sự hike ở đó. Mình biết ơn tất cả những
+            chuyến đi, những con người và những bài học mà mình được trải
+            nghiệm suốt thời gian 6 năm qua khi chinh phục 9 national parks ở
+            California (mặc dù mình đi hết 5 cái trong vòng một năm, i know
+            i'm greedy). À, nhất định không quên cảm ơn ba mẹ đã cho mình cuộc
+            đời được đi đây đó và làm những điều mình thích, mặc dù mình biết
+            là để cho đứa con gái duy nhất này đi long nhong mọi nơi thỉnh
+            thoảng cũng lo lắng lắm. Và dì mình nữa, dì đã tin tưởng và sau
+            nhiều chuyến đi thì đã dừng hỏi mình đi đâu, thay vào đó chỉ nói
+            nhẹ "đi chơi gì đi hoài vậy!"
+          </p>
 
-            <p
-              class="mooli-regular mobile-text"
-              style="margin-left: 30px; margin-top: 20px; text-align: justify"
-            >
-              <u>Pinnacles, 2023</u>
-            </p>
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Bẵng đi một thời gian, covid hit, rồi công việc, giấy tờ, mình vẫn
-              long nhong đi chơi đây đó, nhưng tuyệt nhiên không hề nghĩ đến
-              việc đi National Park. Một phần là không tìm được người có thời
-              gian đi chung cùng mình. một phần nữa là nỗi sợ chiếc xe cũ cà
-              tàng của mình sẽ không sống sót được nếu đi chơi xa. Vậy là mình
-              vẫn đi chơi loanh quanh Cali này, rồi Las Vegas, Texas thăm chị
-              Chi, Hawaii, rồi bay cả về Việt Nam. Cho tới khi tự mình mua được
-              chiếc xe mới rồi, mình lại tiếp tục loanh quanh Cali, xuống So-cal
-              không biết bao nhiêu lần nhưng tuyệt nhiên vẫn bỏ quên National
-              Park. Và rồi phải cảm ơn cô Đông Hà đã không những tặng cho một
-              chuyến hội ngộ ở SF mà còn tặng đính kèm thêm thằng đệ mà cô nói
-              "sống chung trong cùng một khu phố nhưng chẳng bao giờ biết nhau".
-              Để rồi thằng đệ em đời đó đã lôi mình lại con đường đam mê sưu tầm
-              magnet ở national parks. cảm ơn thằng đệ đã không ngại một ngày hè
-              tháng 7 nóng như khùng điên, vác cặp xách cho mình, hike cùng mình
-              hơn 6 miles ở Pinnacles National Park mặc dù cả hai đứa vẫn chỉ là
-              dân beginner với hiking. Thằng đệ này chính là highlight của năm
-              2023, vì nếu không có người này thì cái app Alltrails sẽ không bao
-              giờ được tải về để tìm thêm tiếp những cái trails mới, và lưu lại
-              những lần đi chơi national parks khác nữa. Pinnacles có thể là cái
-              national park ở gần nhà nhất (vậy mà mất tới 4 năm mình mới được
-              đi), nhưng sẽ là cái national park đánh dấu sự trở lại đường đua
-              chinh phục National Park của mình. Pinnacles là national park thứ
-              2 mình visit. vui thật vì số 2 cũng là số mà mình yêu thích. happy
-              to be back! :)
-            </p>
-
-            <!-- IMPROVED IMAGE GALLERY 2 WITH TIGHTER SPACING -->
-            <div class="image-gallery-container">
-              <!-- Large Image -->
-              <div class="gallery-image-wrapper">
-                <a
-                  class="venobox"
-                  data-gall="gallery01"
-                  data-fitview="true"
-                  href="img/blog/nationalpark/nationpark5.webp"
-                >
-                  <img
-                    src="img/blog/nationalpark/nationpark5.webp"
-                    alt="Pinnacles National Park 5"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-
-              <!-- Grid Row 1 -->
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark6.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark6.webp"
-                        alt="Pinnacles National Park 6"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark7.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark7.webp"
-                        alt="Pinnacles National Park 7"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Grid Row 2 -->
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark8.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark8.webp"
-                        alt="Pinnacles National Park 8"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark9.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark9.webp"
-                        alt="Pinnacles National Park 9"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- END IMAGE GALLERY 2 -->
-            <p
-              class="mooli-regular mobile-text"
-              style="margin-left: 30px; margin-top: 20px; text-align: justify"
-            >
-              <u>Sequoia and Kings, 2024</u>
-            </p>
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Mọi người có tin rằng những thứ mình làm vào ngày đầu năm mới
-              thường sẽ ảnh hưởng hoặc phản chiếu một phần nào đó những gì sẽ
-              diễn ra trong suốt năm đó không? mình có. Đầu năm 2024, cả nhà
-              mình đi hike nhẹ ở ngọn đồi sau trường Evergreen College để xin
-              vía cho mình sẽ được nhận vào trường học y tá, và thật sự thì sau
-              đó mình nhận tin được accept chỉ một ngày trước sinh nhật mình. Có
-              lẽ cũng vì được hike đầu năm mà cả năm đó mình được tự do đi hike
-              thật nhiều. Mình thích thời gian chỉ có một mình đi hike ở tất cả
-              những nơi mình muốn. Và mình cũng biết ơn hai chị, chị Yến và Vân,
-              đã cùng mình đi Sequoia và Kings National Park vào một ngày hè
-              tháng 7 năm đó. Chắc là do lo sợ khi nào học y tá rồi thì sẽ ít có
-              thời gian để đi chơi nên hai chị mùa hè đó đã cùng mình rong ruổi
-              nhiều nơi, con đường chạy đi Big Sur ngày hè đó tràn ngập tiếng
-              cười, cùng với thật nhiều dự định về tương lai tốt đẹp hơn. Cũng
-              vì chuyến đi này mà mình đã bắt đầu suy nghĩ (hơi toxic) rằng
-              những nơi mà có thể đi tới trong vòng 4-5 tiếng thì có thể thực
-              hiện được trong một ngày haha. Và mặc dù đi về hơi đuối thật,
-              nhưng được húp tô phở nóng (dù không ngon lắm nhưng vì trễ quá rồi
-              không có nhiều sự lựa chọn) sau một ngày rong ruổi tự nhiên thấy
-              cũng xứng đáng với cái sự mệt này quá!
-            </p>
-            <div class="image-gallery-container">
-              <!-- Large Image -->
-              <div class="gallery-image-wrapper">
-                <a
-                  class="venobox"
-                  data-gall="gallery01"
-                  data-fitview="true"
-                  href="img/blog/nationalpark/nationpark10.webp"
-                >
-                  <img
-                    src="img/blog/nationalpark/nationpark10.webp"
-                    alt="Pinnacles National Park 10"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-
-              <!-- Grid Row 1 -->
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark11.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark11.webp"
-                        alt="Pinnacles National Park 11"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark12.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark12.webp"
-                        alt="Pinnacles National Park 12"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Grid Row 2 -->
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <p
-                    class="mooli-regular"
-                    style="margin: 30px; text-align: justify"
-                  >
-                    Mình đã tự hỏi tại sao Kings lại không nổi tiếng như Sequoia
-                    mặc dù hai cái national parks này chẳng khác gì nhau nhiều
-                    lắm và lại gần xịt nhau. Hai chị bạn mình còn băn khoăn tại
-                    sao không gộp luôn hai cái thành một!? Nếu đây là một cuộc
-                    đua, Sequoia là số 1 còn Kings phải là số 2. Nhưng dù là số
-                    nào đi nữa, mình thầm ngưỡng mộ sự hoành tráng và đa dạng
-                    của Kings. Mà thích nhất là cái sự đẹp này toả sáng trong
-                    thầm lặng, không ồn ào như Sequoia. và mình đã nói số 2 là
-                    số yêu thích của mình mà :)
-                  </p>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark13.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark13.webp"
-                        alt="Pinnacles National Park 13"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Some say Kings Canyon National Park is so underrated because it’s
-              peaceful and uncrowded. Wouldn’t it the best reason to love this
-              park?
-            </p>
-
-            <div class="image-gallery-container">
-              <!-- Grid Row 1 -->
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark14.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark14.webp"
-                        alt="Pinnacles National Park 14"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark15.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark15.webp"
-                        alt="Pinnacles National Park 15"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Grid Row 2 -->
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-4">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark16.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark16.webp"
-                        alt="Pinnacles National Park 16"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark17.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark17.webp"
-                        alt="Pinnacles National Park 17"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark18.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark18.webp"
-                        alt="Pinnacles National Park 18"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p
-              class="mooli-regular mobile-text"
-              style="margin-left: 30px; margin-top: 20px; text-align: justify"
-            >
-              <u>Redwood and Lassen Volcanic, May 2025</u>
-            </p>
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Có lẽ không gì hạnh phúc bằng rủ được hội bạn cùng đi National
-              Parks chung, vì mình biết không nhiều người thích đi hiking hay
-              road trip. Vậy nên chuyến đi Redwood và Lassen Volcanic National
-              Park này có thể là chuyến đi đông người nhất mà mình từng được
-              plan và thực hiện (có thể cũng là duy nhất, vì mình thực sự thích
-              small party). Chuyến đi này giống như là tự thưởng sau khi qua
-              được kì thứ 2 của nursing program. Cái cảm giác vừa stress khi đi
-              học, vừa stress lên plan đi chơi nó sướng gì đâu :)) Đây cũng là
-              lần đầu đi mướn được chiếc xe bự nhất từ trước giờ để đi chơi. Lúc
-              mà lấy xe từ chỗ rent ở sân bay về, mình cứ nghĩ là mình quẹt xe
-              trúng cái tường ở nơi parking rồi á tại người mình nhỏ xíu mà xe
-              thì bự, mình lái chưa quen nên không thấy đường gì hết trơn :(
-              Nhưng mà đi 2 ngày về thì mình tự tin lái đuợc cả xe tải (jk haha)
-            </p>
-
-            <div class="image-gallery-container">
-              <!-- Large Image -->
-              <div class="gallery-image-wrapper">
-                <a
-                  class="venobox"
-                  data-gall="gallery01"
-                  data-fitview="true"
-                  href="img/blog/nationalpark/nationpark19.webp"
-                >
-                  <img
-                    src="img/blog/nationalpark/nationpark19.webp"
-                    alt="Pinnacles National Park 10"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Mình có một kỉ niệm chắc sẽ không bao giờ quên được ở Redwood. Vì
-              không thể mua được permit để hike Fern Canyon Loop nên nhóm mình
-              quyết định chơi liều đi hike cái trail hơn 10 miles James Irvine
-              Trail, nhưng tính ra chỉ hike được 6.4 miles thôi vì không thể
-              vòng về lại được do Long bị đau chân. Cũng vì vậy mà có một kỉ
-              niệm khó quên. Đó là tụi mình tưởng cái chỗ kết thúc của trail với
-              cái chỗ đậu xe chắc cũng gần thôi, không ngờ nó mất tới hơn 30
-              phút lái xe mới tới nơi. Mà chỗ đó thì không có uber, đi bộ thì
-              không được do đồng đội quá mệt và đau chân, nên thành ra tụi mình
-              coi như là bị kẹt ở đó. Cách cuối cùng là phải đi hỏi nhờ những
-              người xung quanh cho đi nhờ về chỗ đậu xe, mà cũng đâu phải dễ vì
-              nhóm đông tới 6 người. Trộm vía sao xin được một cặp đôi đồng ý
-              chở mình và chị Yến về chỗ đậu xe. Trên đường đi nói chuyện thì
-              biết bạn gái đó cũng là nurse vừa tốt nghiệp và làm ở Daily City.
-              trong khi nói chuyện thì hai bạn đó nghĩ là có thể chở hết tất cả
-              mọi người trong một chuyến luôn thì mình không cần phải lái xe
-              quay lại con đường vừa nhỏ, vừa xóc đó nữa. Bây giờ ngồi nhớ lại,
-              nếu như hôm đó không nhờ được hai bạn trẻ kia chở về thì thực sự
-              không biết sẽ như nào nữa. Vì nếu mình có hike ngược lại cái đường
-              đi vào dù đã rất mệt rồi, thì khi lấy được xe và tới chở mọi người
-              có lẽ là trời sẽ tối mất, mà lái xe đường đó vào buổi tối thì thôi
-              rồi luôn...Không dám nghĩ tới nữa. thôi trời cho sống tiếp :))
-            </p>
-
-            <div class="image-gallery-container">
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark20.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark20.webp"
-                        alt="Pinnacles National Park 14"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark21.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark21.webp"
-                        alt="Pinnacles National Park 15"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Một điều đặc biệt của chuyến đi này nữa là mình được ngắm tuyết ở
-              Lassen Volcanic np. còn gì lạ hơn được thấy tuyết ở khu vực núi
-              lửa vào một ngày...mùa hè ở Cali. Vậy nên mình nghĩ là cuộc sống
-              này nó có nhiều thứ kì lạ nhưng đặc biệt, nên mình phải luôn luôn
-              think positive khi nó xảy ra. à, với cả ăn ly mì gói khi đi chơi
-              xa ở nơi lạnh lạnh nó sướng cái người lắm luôn hehe!
-            </p>
-
-            <div class="image-gallery-container">
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark22.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark22.webp"
-                        alt="Pinnacles National Park 14"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark23.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark23.webp"
-                        alt="Pinnacles National Park 15"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="image-gallery-container">
-              <!-- Grid Row 1 -->
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark24.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark24.webp"
-                        alt="Pinnacles National Park 13"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <p
-                    class="mooli-regular"
-                    style="margin: 30px; text-align: justify"
-                  >
-                    Perhaps it’s not too late to appreciate the unique feeling
-                    of marking the days on the calendar. life genuinely (and
-                    suddenly) worth looking forward to.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Grid Row 2 -->
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark25.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark25.webp"
-                        alt="Pinnacles National Park 11"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark26.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark26.webp"
-                        alt="Pinnacles National Park 12"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p
-              class="mooli-regular mobile-text"
-              style="margin-left: 30px; margin-top: 20px; text-align: justify"
-            >
-              <u>Channel Islands, July 2025</u>
-            </p>
-            <blockquote class="blockquote">
-              <p class="mb-0">
-                “My toxic trait is that I think anything that is within a 4-5
-                hour drive can be a quick day trip 🫣 ”
-              </p>
-            </blockquote>
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Thật vậy! nhưng vì chẳng ai cản (đúng ra là không cản được) nên
-              mình cứ đi thôi :)) phải cảm ơn chị Yến vì hầu như kèo nào mình rủ
-              đi chơi chị cũng sẵn sàng free để đi cùng mình. bỏ sếp bỏ việc chứ
-              nhất định không bỏ đi chơi :) hai chị em đi chơi cùng nhau nhiều
-              tới nỗi chị Yến tự nhận là bữa nay qua nhà Nhi ngủ lại thấy cái
-              giường nó thân quen, chỉ cần đặt lưng xuống là có thể ngủ liền
-              (bonus thêm tiếng ngáy mỗi đêm nên thường ngày đi chơi mình hay bị
-              mất ngủ haha). chắc trên đời cũng không có nhiều người như chị
-              Yến, chấp nhận cùng mình lái xe 4 tiếng đồng hồ từ 2-3 giờ sáng
-              xuống Ventura, đi tàu ra đảo đi hike một cái trail dài gần 8 miles
-              dưới cái nắng nóng không có một bóng cây, rồi lại đi tàu quay lại
-              đất liền, lái xe 4 tiếng hơn về nhà là qua luôn ngày mới. tô phở
-              nóng sau khi về đất liền sau một ngày hike khùng điên quả thật
-              xứng là highlight của ngày hè tháng 7 đó.
-            </p>
-
-            <div class="image-gallery-container">
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark27.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark27.webp"
-                        alt="Pinnacles National Park 14"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark28.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark28.webp"
-                        alt="Pinnacles National Park 15"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div
-                    class="row align-items-center gallery-row justify-content-center"
-                  >
-                    <div class="col-12 col-md-8">
-                      <div class="gallery-image-wrapper">
-                        <a
-                          class="venobox"
-                          data-gall="gallery01"
-                          data-fitview="true"
-                          href="img/blog/nationalpark/nationpark29.webp"
-                        >
-                          <img
-                            src="img/blog/nationalpark/nationpark29.webp"
-                            alt="Pinnacles National Park 15"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="row align-items-center gallery-row justify-content-center"
-                  >
-                    <div class="col-12 col-md-8">
-                      <div class="gallery-image-wrapper">
-                        <a
-                          class="venobox"
-                          data-gall="gallery01"
-                          data-fitview="true"
-                          href="img/blog/nationalpark/nationpark31.webp"
-                        >
-                          <img
-                            src="img/blog/nationalpark/nationpark31.webp"
-                            alt="Pinnacles National Park 15"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark30.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark30.webp"
-                        alt="Pinnacles National Park 15"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-4">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark32.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark32.webp"
-                        alt="Pinnacles National Park 16"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark33.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark33.webp"
-                        alt="Pinnacles National Park 17"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark34.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark34.webp"
-                        alt="Pinnacles National Park 18"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <p
-                class="mooli-regular mobile-text"
-                style="margin: 30px; text-align: justify"
-              >
-                Mình cũng chẳng phải siêu nhân hay gì khi lái xe liên tục mà
-                không mệt. Tối đó thực sự là mình đuối lắm rồi, chừng nửa đêm
-                khi còn cách nhà chừng 1 tiếng nữa là cơ thể mình như muốn sập
-                nguồn tới nơi. Chưa kể là mình lái xe về đêm mình không thấy rõ,
-                như kiểu chụp ảnh mà không lấy nét á, tất cả ánh đèn nó cứ lung
-                linh huyền ảo. Có đoạn xém xíu nữa là lụi vào cái bảng hiệu
-                đường ở khúc rẽ trái, may mà tỉnh kịp. Nhờ ơn chị Yến dù cũng
-                mệt không kém nhưng luôn cố gắng kiếm chuyện để nói với mình cho
-                tỉnh ngủ. Chị Yến là kiểu bạn "một đứa dám rủ, một đứa dám đi"
-                hehee
-              </p>
-
-              <div class="image-gallery-container">
-                <!-- Grid Row 1 -->
-                <div class="row align-items-center gallery-row">
-                  <div class="col-12 col-md-6">
-                    <div class="gallery-image-wrapper">
-                      <a
-                        class="venobox"
-                        data-gall="gallery01"
-                        data-fitview="true"
-                        href="img/blog/nationalpark/nationpark35.webp"
-                      >
-                        <img
-                          src="img/blog/nationalpark/nationpark35.webp"
-                          alt="Pinnacles National Park 13"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="gallery-image-wrapper">
-                      <a
-                        class="venobox"
-                        data-gall="gallery01"
-                        data-fitview="true"
-                        href="img/blog/nationalpark/nationpark36.webp"
-                      >
-                        <img
-                          src="img/blog/nationalpark/nationpark36.webp"
-                          alt="Pinnacles National Park 13"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Grid Row 2 -->
-                <div class="row align-items-center gallery-row">
-                  <div class="col-12 col-md-6">
-                    <div class="gallery-image-wrapper">
-                      <a
-                        class="venobox"
-                        data-gall="gallery01"
-                        data-fitview="true"
-                        href="img/blog/nationalpark/nationpark37.webp"
-                      >
-                        <img
-                          src="img/blog/nationalpark/nationpark37.webp"
-                          alt="Pinnacles National Park 11"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-md-6">
-                    <div class="gallery-image-wrapper">
-                      <a
-                        class="venobox"
-                        data-gall="gallery01"
-                        data-fitview="true"
-                        href="img/blog/nationalpark/nationpark38.webp"
-                      >
-                        <img
-                          src="img/blog/nationalpark/nationpark38.webp"
-                          alt="Pinnacles National Park 12"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p
-              class="mooli-regular mobile-text"
-              style="margin-left: 30px; margin-top: 20px; text-align: justify"
-            >
-              <u>Death Valley and Joshua Tree, Dec 2025</u>
-            </p>
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Death Vally và Joshua Tree là 2 cái np cuối cùng trong chuyến hành
-              trình chinh phục 9 cái np ở Cali của mình. Chuyến đi này mình lên
-              plan từ khi sem 3 còn chưa kết thúc, nên mình cực kì háo hức. Có
-              thời điểm mình thi rớt exam, cái plan này là một trong những động
-              lực để mình tiếp tục cố gắng pass cái lớp medsurg đó. Và thực sự
-              là chuyến đi này không làm mình thất vọng. DDây cũng là chuyến đi
-              đầu tiên mà mình và chị Yến bay cùng nhau (nhắc tới đây vẫn thấy
-              mình silly vì nghe theo gpt book chuyến bay về ở Ontario mặc dù
-              Palm Springs có sân bay gần Joshua Tree hơn). hai đứa đi từ lúc
-              mặt trời còn chưa mọc, được ngắm sunrise ở trên máy bay, đẹp tới
-              mức quên cả cơn buồn ngủ. mình thích cái cảm giác tự do được lái
-              xe ngắm cảnh và check off places ở Death Valley. tụi mình đã tới
-              được điểm thấp nhất của nước Mỹ- Badwater Basin, 86m below the sea
-              level. xong lại lái xe chừng 4 tiếng xuống airbnb của tụi mình ở
-              Joshua Tree np. mình sẽ không bao giờ quên được hai cái bóng người
-              của hai đứa vừa kéo xe đẩy vừa tìm đường vào airbnb nhưng bị lạc
-              do trời quá tối, chưa kể cái lạnh của Joshua vào tháng 12 cuối năm
-              nó buốt dã man. có lẽ vì vui nên không mệt.
-            </p>
-
-            <div class="image-gallery-container">
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/travel/joshua/joshua2.webp"
-                    >
-                      <img
-                        src="img/travel/joshua/joshua2.webp"
-                        alt="Pinnacles National Park 15"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div
-                    class="row align-items-center gallery-row justify-content-center"
-                  >
-                    <div class="col-12">
-                      <div class="gallery-image-wrapper">
-                        <a
-                          class="venobox"
-                          data-gall="gallery01"
-                          data-fitview="true"
-                          href="img/travel/joshua/joshua3.webp"
-                        >
-                          <img
-                            src="img/travel/joshua/joshua3.webp"
-                            alt="Pinnacles National Park 15"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="row align-items-center gallery-row justify-content-center"
-                  >
-                    <div class="col-12">
-                      <div class="gallery-image-wrapper">
-                        <a
-                          class="venobox"
-                          data-gall="gallery01"
-                          data-fitview="true"
-                          href="img/blog/nationalpark/nationpark39.webp"
-                        >
-                          <img
-                            src="img/blog/nationalpark/nationpark39.webp"
-                            alt="Pinnacles National Park 15"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div
-                    class="row align-items-center gallery-row justify-content-center"
-                  >
-                    <div class="col-12">
-                      <div class="gallery-image-wrapper">
-                        <a
-                          class="venobox"
-                          data-gall="gallery01"
-                          data-fitview="true"
-                          href="img/blog/nationalpark/nationpark41.webp"
-                        >
-                          <img
-                            src="img/blog/nationalpark/nationpark41.webp"
-                            alt="Pinnacles National Park 15"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="row align-items-center gallery-row justify-content-center"
-                  >
-                    <div class="col-12">
-                      <div class="gallery-image-wrapper">
-                        <a
-                          class="venobox"
-                          data-gall="gallery01"
-                          data-fitview="true"
-                          href="img/travel/joshua/joshua8.webp"
-                        >
-                          <img
-                            src="img/travel/joshua/joshua8.webp"
-                            alt="Pinnacles National Park 15"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark40.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark40.webp"
-                        alt="Pinnacles National Park 15"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="row align-items-center gallery-row">
-                <div class="col-12">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark42.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark42.webp"
-                        alt="Pinnacles National Park 13"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Hai chị em may mắn vì đi trúng hai ngày thời tiết đẹp. Tối ở lại
-              Joshua không cần phải chạy đi đâu xa cũng được ngồi ngắm sao ngay
-              trước chỗ ngủ của tụi mình. Đâu phải là có thật nhiều tiền mới
-              được tự do đi đây đó, ngồi bên lửa trại uống bia cùng nhau, ngước
-              đầu lên là thấy bầu trời đầy sao. Hai chị em mình làm được những
-              điều này khi cả hai thực sự chẳng có gì nhiều trong tay hết. Rất
-              young, dumb and broke hahaa.
-            </p>
-
-            <div class="image-gallery-container">
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div
-                    class="row align-items-center gallery-row justify-content-center"
-                  >
-                    <div class="col-12">
-                      <div class="gallery-image-wrapper">
-                        <a
-                          class="venobox"
-                          data-gall="gallery01"
-                          data-fitview="true"
-                          href="img/blog/nationalpark/nationpark43.webp"
-                        >
-                          <img
-                            src="img/blog/nationalpark/nationpark43.webp"
-                            alt="Pinnacles National Park 15"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="row align-items-center gallery-row justify-content-center"
-                  >
-                    <div class="col-12">
-                      <div class="gallery-image-wrapper">
-                        <a
-                          class="venobox"
-                          data-gall="gallery01"
-                          data-fitview="true"
-                          href="img/blog/nationalpark/nationpark44.webp"
-                        >
-                          <img
-                            src="img/blog/nationalpark/nationpark44.webp"
-                            alt="Pinnacles National Park 15"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark45.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark45.webp"
-                        alt="Pinnacles National Park 15"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Mặc dù tối đó lạnh quá nên chị Yến bị sốt vì mệt, sáng sớm hôm sau
-              hai đứa vẫn dậy sớm chờ sunrise. How lucky i am to have such an
-              awesome travel buddy? Cảm động quá phải viết tiếng Anh cho đỡ sến
-              huhu. Chị Yến là điển hình cho những người đi cùng mình bất kể kế
-              hoạch của mình trông ngớ ngẩn và nghe có vẻ điên khùng. Người đó
-              không chỉ muốn trở thành bạn đồng hành mà còn là niềm đam mê chung
-              để crossing off a bucket list của nhau. Có lẽ đó là lý do tại sao
-              họ đi cùng và ở lại với mình trong một thời gian dài như vậy, mặc
-              dù có một thời gian cả hai chẳng liên lạc gì với nhau. Tất cả
-              những người đi cùng mình trong hành trình này, những kỷ niệm mà
-              tụi mình chia sẻ cùng nhau sẽ luôn ở đó, chỉ chờ đợi để được khơi
-              dậy một lần nữa mỗi khi chúng mình nói về những chuyến đi trong
-              quá khứ. Thật tuyệt khi có những kỉ niệm chung để nói về trong
-              cuộc sống phải không?
-            </p>
-
-            <div class="image-gallery-container">
-              <!-- Grid Row 1 -->
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark47.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark47.webp"
-                        alt="Pinnacles National Park 7"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/travel/joshua/joshua14.webp"
-                    >
-                      <img
-                        src="img/travel/joshua/joshua14.webp"
-                        alt="Pinnacles National Park 8"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Grid Row 2 -->
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/blog/nationalpark/nationpark46.webp"
-                    >
-                      <img
-                        src="img/blog/nationalpark/nationpark46.webp"
-                        alt="Pinnacles National Park 6"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/travel/joshua/joshua17.webp"
-                    >
-                      <img
-                        src="img/travel/joshua/joshua17.webp"
-                        alt="Pinnacles National Park 9"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-
+          <div class="image-gallery-container">
+            <!-- Grid Row 1 -->
+            <div class="row align-items-center gallery-row">
+              <div class="col-12 col-md-6">
                 <div class="gallery-image-wrapper">
-                  <a
-                    class="venobox"
-                    data-gall="gallery01"
-                    data-fitview="true"
-                    href="img/blog/nationalpark/nationpark48.webp"
-                  >
-                    <img
-                      src="img/blog/nationalpark/nationpark48.webp"
-                      alt="Yosemite National Park 2"
-                      loading="lazy"
-                    />
+                  <a class="venobox" data-gall="gallery01" data-fitview="true" href="img/travel/joshua/joshua7.webp">
+                    <img src="img/travel/joshua/joshua7.webp" alt="Pinnacles National Park 6" loading="lazy" />
                   </a>
                 </div>
+              </div>
 
-                <!-- Grid for smaller images with tighter spacing -->
-                <div class="row align-items-center gallery-row">
-                  <div class="col-12 col-md-6">
-                    <div class="gallery-image-wrapper">
-                      <a
-                        class="venobox"
-                        data-gall="gallery01"
-                        data-fitview="true"
-                        href="img/travel/joshua/joshua23.webp"
-                      >
-                        <img
-                          src="img/travel/joshua/joshua23.webp"
-                          alt="Yosemite National Park 3"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-md-6">
-                    <div class="gallery-image-wrapper">
-                      <a
-                        class="venobox"
-                        data-gall="gallery01"
-                        data-fitview="true"
-                        href="img/blog/nationalpark/nationpark49.webp"
-                      >
-                        <img
-                          src="img/blog/nationalpark/nationpark49.webp"
-                          alt="Yosemite National Park 4"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
+              <div class="col-12 col-md-6">
+                <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+                  Thì đời là một chuyến đi mà. live when you can :) ——> this
+                  is me rewinding my journey of visiting all 9 national parks
+                  of California…I’m so freaking grateful…
+                </p>
               </div>
             </div>
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              Trái đất này thật sự rất rộng lớn, và có thật là nhiều nơi nữa mà
-              mình muốn được đặt chân tới. vậy nên thường mình không háo hức lắm
-              khi quay lại những nơi mà mình đã từng đi qua, nếu như không vì
-              một lí do đặc biệt nào đó. Nhưng mà, Yosemite có lẽ là national
-              park duy nhất mà nếu như có cơ hội trong tương lai, mình muốn được
-              quay lại một lần và thực sự hike ở đó. Mình biết ơn tất cả những
-              chuyến đi, những con người và những bài học mà mình được trải
-              nghiệm suốt thời gian 6 năm qua khi chinh phục 9 national parks ở
-              California (mặc dù mình đi hết 5 cái trong vòng một năm, i know
-              i'm greedy). À, nhất định không quên cảm ơn ba mẹ đã cho mình cuộc
-              đời được đi đây đó và làm những điều mình thích, mặc dù mình biết
-              là để cho đứa con gái duy nhất này đi long nhong mọi nơi thỉnh
-              thoảng cũng lo lắng lắm. Và dì mình nữa, dì đã tin tưởng và sau
-              nhiều chuyến đi thì đã dừng hỏi mình đi đâu, thay vào đó chỉ nói
-              nhẹ "đi chơi gì đi hoài vậy!"
+            <p class="mooli-regular mobile-text" style="margin: 30px; text-align: center">
+              It starts with a car, 4 people, 4 hours driving.
+              <br />
+              It ends with a car, 2 people, 6 hours driving.
+              <br />
+              All for infinite memories. To remember forever.
             </p>
-
-            <div class="image-gallery-container">
-              <!-- Grid Row 1 -->
-              <div class="row align-items-center gallery-row">
-                <div class="col-12 col-md-6">
-                  <div class="gallery-image-wrapper">
-                    <a
-                      class="venobox"
-                      data-gall="gallery01"
-                      data-fitview="true"
-                      href="img/travel/joshua/joshua7.webp"
-                    >
-                      <img
-                        src="img/travel/joshua/joshua7.webp"
-                        alt="Pinnacles National Park 6"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <p
-                    class="mooli-regular mobile-text"
-                    style="margin: 30px; text-align: justify"
-                  >
-                    Thì đời là một chuyến đi mà. live when you can :) ——> this
-                    is me rewinding my journey of visiting all 9 national parks
-                    of California…I’m so freaking grateful…
-                  </p>
-                </div>
-              </div>
-              <p
-                class="mooli-regular mobile-text"
-                style="margin: 30px; text-align: center"
-              >
-                It starts with a car, 4 people, 4 hours driving.
-                <br />
-                It ends with a car, 2 people, 6 hours driving.
-                <br />
-                All for infinite memories. To remember forever.
-              </p>
-              <div class="gallery-image-wrapper">
-                <a
-                  class="venobox"
-                  data-gall="gallery01"
-                  data-fitview="true"
-                  href="img/blog/nationalpark/nationpark50.webp"
-                >
-                  <img
-                    src="img/blog/nationalpark/nationpark50.webp"
-                    alt="Pinnacles National Park 5"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
+            <div class="gallery-image-wrapper">
+              <a class="venobox" data-gall="gallery01" data-fitview="true"
+                href="img/blog/nationalpark/nationpark50.webp">
+                <img src="img/blog/nationalpark/nationpark50.webp" alt="Pinnacles National Park 5" loading="lazy" />
+              </a>
             </div>
-            <p
-              class="mooli-regular mobile-text"
-              style="margin: 30px; text-align: justify"
-            >
-              P/s: After visiting all national parks of California, i had myself
-              some nice collections. My magnets collection stay on my aunt
-              fridge for now (probably until i have myself a house). My stickers
-              collection stay on my water bottle and im happy when people see
-              them and ask me questions about the trips. But my most fav
-              collection is the postcards that i gave my friend. Funny how every
-              single time i bought them and wrote her something, i feel like i
-              was a poet trying to write love letters. Im sure this postcards
-              collection is the one im most proud of, and the nicest thing about
-              it is that i dont even possess them, my friend does :)
-            </p>
           </div>
+          <p class="mooli-regular mobile-text" style="margin: 30px; text-align: justify">
+            P/s: After visiting all national parks of California, i had myself
+            some nice collections. My magnets collection stay on my aunt
+            fridge for now (probably until i have myself a house). My stickers
+            collection stay on my water bottle and im happy when people see
+            them and ask me questions about the trips. But my most fav
+            collection is the postcards that i gave my friend. Funny how every
+            single time i bought them and wrote her something, i feel like i
+            was a poet trying to write love letters. Im sure this postcards
+            collection is the one im most proud of, and the nicest thing about
+            it is that i dont even possess them, my friend does :)
+          </p>
         </div>
       </div>
-      <div class="row mt-5" style="justify-content: center">
-        <div class="col-4 col-sm-3">
-          <a
-            class="btn btn-dark w-100 text-center"
-            style="
+    </div>
+    <div class="row mt-5" style="justify-content: center">
+      <div class="col-4 col-sm-3">
+        <a class="btn btn-dark w-100 text-center" style="
               display: flex;
               justify-content: center;
               margin: auto;
               margin-bottom: 20px;
               margin-top: 20px;
-            "
-            href="index.html"
-            >Back to home</a
-          >
-        </div>
-        <div class="col-4 col-sm-3">
-          <a
-            class="btn btn-dark w-100 text-center"
-            style="
+            " href="index.html">Back to home</a>
+      </div>
+      <div class="col-4 col-sm-3">
+        <a class="btn btn-dark w-100 text-center" style="
               display: flex;
               justify-content: center;
               margin: auto;
               margin-bottom: 20px;
               margin-top: 20px;
-            "
-            href="album.html"
-            >Back to album</a
-          >
-        </div>
-        <div class="col-4 col-sm-3">
-          <a
-            class="btn btn-dark w-100 text-center"
-            style="
+            " href="album.html">Back to album</a>
+      </div>
+      <div class="col-4 col-sm-3">
+        <a class="btn btn-dark w-100 text-center" style="
               display: flex;
               justify-content: center;
               margin: auto;
               margin-bottom: 20px;
               margin-top: 20px;
-            "
-            href="blog.html"
-            >Back to blog</a
-          >
+            " href="blog.html">Back to blog</a>
+      </div>
+    </div>
+  </section>
+
+  <!--Footer-->
+  <footer class="text-white py-5 bg-black">
+    <div class="container py-4">
+      <!-- About Section -->
+      <div class="row">
+        <div class="col-12 text-center mb-4">
+          <p class="text-secondary lh-base">
+            I believe there is extraordinary beauty in the simplest of
+            moments.<br />
+            And that beautiful moments deserve awesome photographs.
+          </p>
         </div>
       </div>
-    </section>
 
-    <!--Footer-->
-    <footer class="text-white py-5 bg-black">
-      <div class="container py-4">
-        <!-- About Section -->
-        <div class="row">
-          <div class="col-12 text-center mb-4">
-            <p class="text-secondary lh-base">
-              I believe there is extraordinary beauty in the simplest of
-              moments.<br />
-              And that beautiful moments deserve awesome photographs.
-            </p>
-          </div>
+      <hr class="border-secondary" />
+
+      <!-- Copyright & Social Icons -->
+      <div class="row align-items-center text-center text-md-start">
+        <div class="col-12 col-md-8 mb-2 mb-md-0">
+          <p class="mb-0 text-secondary">
+            Copyright © 2023 by Vo Ngoc Khanh Nhi
+          </p>
         </div>
 
-        <hr class="border-secondary" />
-
-        <!-- Copyright & Social Icons -->
-        <div class="row align-items-center text-center text-md-start">
-          <div class="col-12 col-md-8 mb-2 mb-md-0">
-            <p class="mb-0 text-secondary">
-              Copyright © 2023 by Vo Ngoc Khanh Nhi
-            </p>
-          </div>
-
-          <div class="col-12 col-md-4">
-            <ul
-              class="social-icons list-unstyled d-flex justify-content-center justify-content-md-end gap-2 mb-0"
-            >
-              <li>
-                <a
-                  class="facebook"
-                  href="https://www.facebook.com/awesomedreamerphotography"
-                  target="_blank"
-                  ><i class="fa fa-facebook"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  class="instagram"
-                  href="https://www.instagram.com/anawesomeworld_vnkn/"
-                  target="_blank"
-                  ><i class="fa fa-instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  class="flickr"
-                  href="https://www.flickr.com/photos/153690456@N03/albums/"
-                  target="_blank"
-                  ><i class="fa fa-flickr"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
+        <div class="col-12 col-md-4">
+          <ul class="social-icons list-unstyled d-flex justify-content-center justify-content-md-end gap-2 mb-0">
+            <li>
+              <a class="facebook" href="https://www.facebook.com/awesomedreamerphotography" target="_blank"><i
+                  class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a class="instagram" href="https://www.instagram.com/anawesomeworld_vnkn/" target="_blank"><i
+                  class="fa fa-instagram"></i></a>
+            </li>
+            <li>
+              <a class="flickr" href="https://www.flickr.com/photos/153690456@N03/albums/" target="_blank"><i
+                  class="fa fa-flickr"></i></a>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
-    <script src="venobox/venobox.min.js"></script>
-    <script src="venobox/custom.js"></script>
-  </body>
+    </div>
+  </footer>
+  <script src="venobox/venobox.min.js"></script>
+  <script src="venobox/custom.js"></script>
+</body>
+
 </html>
